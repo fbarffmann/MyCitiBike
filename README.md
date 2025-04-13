@@ -1,36 +1,40 @@
-# Citi Bike Usage Analysis & Interactive Map
+# MyCitiBike NYC Station Status Map
 
-Built an interactive Leaflet.js map visualizing New York City's Citi Bike usage data. Analyzed station locations, trip frequency, and provided a user-friendly interface for exploring patterns in bike availability and density.
+Built an interactive Leaflet.js map that visualizes real-time status of over 1,000 Citi Bike stations across New York City. Categorized stations based on number of available bikes using live API data and rendered custom markers to show availability at a glance.
 
 ## Tools & Technologies Used
 
 - JavaScript
 - Leaflet.js
 - HTML/CSS
-- GeoJSON
-- Data Visualization
+- d3.js
+- Live JSON APIs (Citi Bike GBFS feeds)
 
 ## File Structure
 
 ```text
 .
-├── index.html - Webpage structure
+├── index.html              # Landing page for map
 ├── static/
-│   ├── css/style.css - Styling for the map
-│   ├── js/logic.js - JavaScript logic for interactive map
-│   └── img/ - Custom marker images
+│   ├── js/logic.js         # JavaScript mapping logic
+│   ├── css/style.css       # Custom map styles
+│   └── img/                # Custom marker images
 ```
 
 ## Skills Demonstrated
 
-- Interactive mapping with Leaflet.js
-- Visualizing geospatial data
-- Working with GeoJSON data
-- Customizing map markers and popups
-- Front-end data presentation for user experience
+- Consuming and transforming real-time API data
+- Categorizing data based on conditional logic
+- Building dynamic map visualizations using Leaflet.js
+- Using custom marker styles to improve UX
+- Organizing modular front-end code for clarity
 
 ## Key Findings
 
-- Visualized over 750 Citi Bike station locations across NYC.
-- Mapped station density to highlight usage hotspots and low-coverage areas.
-- Created dynamic popups with station-specific details to improve user navigation and exploration.
+- Visualized over 1,000 Citi Bike stations by status in real time.
+- Defined availability tiers:
+  - **Empty**: 0 bikes  
+  - **Low**: 1–4 bikes  
+  - **Normal**: 5+ bikes  
+- Integrated two live API endpoints (station info + status) to enrich each marker.
+- Enabled users to identify low-stock and out-of-service stations at a glance.
